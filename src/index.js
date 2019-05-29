@@ -1,7 +1,7 @@
 var welcome = new Vue({
     el: '#theVue',
     data: {
-        jumboStu: '',
+        jumboStu: 'Stuart Hopkins',
     },
     methods: {
         fadein: function(el) {
@@ -21,10 +21,10 @@ var welcome = new Vue({
 
         }
     },
-    created(){
+    created: function(){
+        // this.jumboStu.opacity = 1;
+        // console.log('created ran');
         // fadein(this.jumboStu);
-        this.jumboStu.setAttribute('opacity', '0');
-        this.jumboStu = 'Stuart Hopkins';
     },
 
 });
