@@ -4,6 +4,8 @@
     background-attachment: fixed;
     max-width: 100%;
     height: 700px;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .sectionHeaderTitle {
