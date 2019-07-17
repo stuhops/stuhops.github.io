@@ -1,0 +1,13 @@
+.sectionHeader {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    max-width: 100%;
+    height: 700px;
+}
+
+.sectionHeaderTitle {
+    text-align: center;
+    color: WHITESMOKE;
+    text-shadow: 0px 0px 5px black;
+}
