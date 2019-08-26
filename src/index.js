@@ -1,13 +1,10 @@
 var welcome = new Vue({
-    el: '#theVue',
+    el: 'app',
     data: {
-        jumboStu: [{'class': 'hidden'}],
     },
     methods: {
-
     },
     created(){
-
     },
 
 });
