@@ -13,3 +13,7 @@
     color: WHITESMOKE;
     text-shadow: 0px 0px 5px black;
 }
+
+.card-overlay {
+    background-color: rgba(245, 245, 245, .5);
+}
