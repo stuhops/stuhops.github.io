@@ -65,7 +65,9 @@ var app = new Vue({
         }
     },
     methods: {
-        dropdownFactory: tag => {
+        dropdownFactory: function (tag) {
+            window.alert('drowpdownFactory triggered');
+            tagId = document.getElementById('tag');
             switch(tag){
                 case education:
                     break;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <title>Stuart Hopkins</title>
     <meta charset="utf-8">
@@ -50,14 +50,12 @@
 
     <br>
 
-    <a href="education.html" style="text-decoration: none;">
-        <div id="education">
-            <div class="jumbotron jumbotron-fluid sectionHeader" style="background-image: url('../data/education.jpg');">
-                <!--TODO: Make it so that based on some action the title disappears and reveals the information-->
-                <p class="display-1 sectionHeaderTitle"><br><br>Education</p>
-            </div>
+    <div id="education" >
+        <div class="jumbotron jumbotron-fluid sectionHeader" style="background-image: url('../data/education.jpg');">
+            <!--TODO: Make it so that based on some action the title disappears and reveals the information-->
+            <p class="display-1 sectionHeaderTitle" v-on:click="dropdownFactory(education);"><br><br>Education</p>
         </div>
-    </a>
+    </div>
 
     <a href="experience.html" style="text-decoration: none;">
         <div id="experience">
@@ -102,10 +100,8 @@
     </a>
 
 
-    <!--TODO: Transfer resume onto the website (broken up)-->
     <!--TODO: Add the resume as drop downs when clicked on-->
 
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="index.js"></script>
 
 </div>
