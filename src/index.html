@@ -15,8 +15,10 @@
 <div id="app">
 
     <div id="welcome">
-        <div id=jumboStu class="jumbotron jumbotron-fluid sectionHeader" style="background-image: url('../data/welcome.JPG');">
-            <p class="display-1 animated fadeIn" style="text-align:center; color:WHITESMOKE; text-shadow: 0px 0px 5px black;"><br><br>Stuart Hopkins</p>
+        <div id=jumboStu class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/welcome.JPG');">
+            <div class="row mx-auto my-auto align-items-center">
+                <p class="display-3" style="color:WHITESMOKE; text-shadow: 0px 0px 5px black;">Stuart Hopkins</p>
+            </div>
         </div>
     </div>
 
@@ -52,7 +54,7 @@
     </nav>
 
     <div class="alert alert-success alert-dismissible fade show fixed-bottom" style="margin-bottom: 0px;" role="alert">
-        <strong>Hello there!</strong> To reveal more information about any category, scroll through the carousal by clicking the
+        <strong>Hello there!</strong> To reveal more information about any category, scroll through the carousel by clicking the
         <span class="carousel-control-prev-icon carousel-arrows"></span>
         <span class="carousel-control-next-icon carousel-arrows"></span>
         icons.
@@ -72,7 +74,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Education</p>
+                                                <p class="card-title display-3">Education</p>
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +103,8 @@
                         <a class="carousel-control-prev" href="#educationCarousel" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
-                        <a class="carousel-control-next" href="#educationCarousel" data-slide="next">
+                        <a class="carousel-control-next" href="#educationCarousel" data-slide="next" data-toggle="popover" title="Click Me!"
+                                data-content="Click here to see more information about Stuart's education">
                             <span class="carousel-control-next-icon"></span>
                         </a>
                     </div>
@@ -121,7 +124,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Experience</p>
+                                                <p class="card-title display-3">Experience</p>
                                             </div>
                                         </div>
                                     </div>
@@ -175,7 +178,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Hobbies</p>
+                                                <p class="card-title display-3">Hobbies</p>
                                             </div>
                                         </div>
                                     </div>
@@ -226,7 +229,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Leadership</p>
+                                                <p class="card-title display-3">Leadership</p>
                                             </div>
                                         </div>
                                     </div>
@@ -276,7 +279,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Service</p>
+                                                <p class="card-title display-3">Service</p>
                                             </div>
                                         </div>
                                     </div>
@@ -289,14 +292,15 @@
                                             <div class="card-body">
                                                 <h1 class="card-title">Service</h1>
                                                 <p class="card-text">
-                                                    Medical missions:
+                                                    Humanitarian missions:
                                                     <br>     2018 Dominican Republic
                                                     <br>     2012 Ecuador
                                                     <br>
                                                     <br>USUSA Excellence in Neuroscience club
                                                     <br>     Head of Graphic design and Marketing
                                                     <br>
-                                                    <br>LDS Mission to Mexico 2017
+                                                    <br>Mission for the Church of Jesus Christ of Latter Day Saints
+                                                    <br>Mexico 2017
                                                     <br>
                                                     <br>Utah Asthma Coalition 2017
                                                     <br>     Marketing strategy team member
@@ -330,7 +334,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Spoken Languages</p>
+                                                <p class="card-title display-3">Languages</p>
                                             </div>
                                         </div>
                                     </div>
@@ -341,7 +345,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card card-overlay">
                                             <div class="card-body">
-                                                <h1 class="card-title">Spoken Languages</h1>
+                                                <h1 class="card-title">Languages</h1>
                                                 <p class="card-text">
                                                     English
                                                     <br>Spanish
@@ -375,7 +379,7 @@
                                     <div class="col-sm-10 align-center">
                                         <div class="card-transparent">
                                             <div class="card-body sectionHeaderTitle">
-                                                <p class="card-title display-1">Resumé</p>
+                                                <p class="card-title display-3">Resumé</p>
                                             </div>
                                         </div>
                                     </div>
@@ -392,8 +396,9 @@
                                                     <br>contact him through the provided means on
                                                     <br>his resumé.
                                                 </p>
-                                                <button class="btn btn-success ml-auto mr-1"><a href="../data/Stuart_Hopkins_Resume.pdf" download style="color:inherit;">Download
-                                                    Resumé</a></button>
+                                                <button class="btn btn-success ml-auto mr-1"><a href="../data/Stuart_Hopkins_Resume.pdf"
+                                                                                                download style="color:inherit;">Download
+                                                                                                Resumé</a></button>
                                             </div>
                                         </div>
                                     </div>
