@@ -19,7 +19,7 @@
     background-color: rgba(24, 27, 32, .9);
 }
 
-.carousel-control-next, .carousel-control-prev{
+.carousel-control-next, .carousel-control-prev, .carousel-arrows{
     filter: invert(100%);
 }
 
