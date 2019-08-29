@@ -12,8 +12,10 @@
     text-align: center;
     color: WHITESMOKE;
     text-shadow: 0px 0px 5px black;
+    background-color: rgba(24, 27, 32, 0) !important;
 }
 
 .card-overlay {
-    background-color: rgba(245, 245, 245, .5);
+    color: WHITESMOKE;
+    background-color: rgba(24, 27, 32, .9);
 }
