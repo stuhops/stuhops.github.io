@@ -1,9 +1,23 @@
+/*.sectionHeader{*/
+    /*background-size: cover;*/
+    /*background-position: center top;*/
+    /*background-attachment: fixed; !* Is this the same as it was before or is this simpler? *!*/
+    /*max-width: 100%;*/
+    /*height: 100vh;*/
+    /*padding: 0px !important;*/
+    /*margin: 0px !important;*/
+/*}*/
 .sectionHeader{
-    background-size: cover;
-    background-position: center top;
+    display: block;
     background-attachment: fixed; /* Is this the same as it was before or is this simpler? */
+    background-position: center top;
     max-width: 100%;
     height: 100vh;
+    z-index: -10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding: 0px !important;
     margin: 0px !important;
 }
