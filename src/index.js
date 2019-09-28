@@ -65,26 +65,20 @@ var app = new Vue({
         }
     },
     methods: {
-        dropdownFactory: function (tag) {
-            window.alert('drowpdownFactory triggered');
-            tagId = document.getElementById('tag');
-            switch(tag){
-                case education:
-                    break;
-                case experience:
-                    break;
-                case hobbies:
-                    break;
-                case leadership:
-                    break;
-                case service:
-                    break;
-                case references:
-                    break;
-            }
-        }
-    },
-    created(){
-    },
+        // dropdownFactory: tag => {
+        //     switch(tag){
+        //         case education:
+        //             break;
+        //         case experience:
+        //             break;
+        //         case hobbies:
+        //             break;
+        //         case leadership:
+        //             break;
+        //         case service:
+        //             break;
+        //         case references:
+        //             break;
+        //     }
+        // }
 
-});
