@@ -22,3 +22,7 @@
 .carousel-control-next, .carousel-control-prev, .carousel-arrows{
     opacity: 1.0;
 }
+
+.dropdown-menu a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-menu {display: block;}
