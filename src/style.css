@@ -20,6 +20,5 @@
 }
 
 .carousel-control-next, .carousel-control-prev, .carousel-arrows{
-    filter: invert(100%);
+    opacity: 1.0;
 }
-
