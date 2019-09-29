@@ -22,7 +22,7 @@ var climbing = new Vue({
             .then(ticks => ticks.json())
             .then(ticks => {
                 console.log(ticks);
-                for(let i = 0; this.tickList.length < 6; i++) {
+                for(let i = 0; this.tickList.length <= 6; i++) {
                     let tmp = {};
                     tmp['data'] = ticks.ticks[i].date;
                     tmp['notes'] = ticks.ticks[i].notes;
@@ -34,17 +34,24 @@ var climbing = new Vue({
                         this.tickList.push(tmp)
                     }
                 }
+                console.log('ticks')
             })
-            // .then(fetch('https://www.mountainproject.com/data/get-routes?routeIds=105869796&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
-            //     .then(route => route.json())
-            //     .then(route => {
-            //     console.log(route);
-            //     // this.tickLis['name'] = routes[0].name;
-            //     // tmp['type'] = routes[0].type;
-            //     // tmp['stars'] = routes[0].stars;
-            //     // tmp['location'] = routes[0].location;
+            .then(ticks => {
+                console.log('routes');
+                for(let i = 1; i < this.tickList.length; i++) {  // the 'empty array' actually has an initial element so to get 6 entries offset
+                    fetch('https://www.mountainproject.com/data/get-routes?routeIds=' + this.tickList[i].id +
+                        '&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
+                        .then(route => route.json())
+                        .then(route => {
+                            console.log(route);
+                            // this.tickList['name'] = routes[0].name;
+                            // this.tickList['type'] = routes[0].type;
+                            // this.tickList['stars'] = routes[0].stars;
+                            // this.tickList['location'] = routes[0].location;
+                        })
+                }
 
-            }));
-    }
+            });
+    },
 
 });
