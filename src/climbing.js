@@ -43,14 +43,13 @@ var climbing = new Vue({
                         '&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
                         .then(route => route.json())
                         .then(route => {
-                            console.log(route);
-                            // this.tickList['name'] = routes[0].name;
-                            // this.tickList['type'] = routes[0].type;
-                            // this.tickList['stars'] = routes[0].stars;
-                            // this.tickList['location'] = routes[0].location;
+                            this.tickList[i]['name'] = route.routes[0].name;
+                            this.tickList[i]['type'] = route.routes[0].type;
+                            this.tickList[i]['stars'] = route.routes[0].stars;
+                            this.tickList[i]['location'] = route.routes[0].location;
                         })
                 }
-
+                console.log(this.tickList)
             });
     },
 
