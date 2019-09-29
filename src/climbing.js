@@ -1,7 +1,7 @@
 var climbing = new Vue({
-    el: 'app',
+    el: '#app',
     data:{
-        climber: {},
+        climber: {name: 'Stu'},
         tickList: [{}],
     },
     methods:{ },
@@ -12,7 +12,6 @@ var climbing = new Vue({
             .then(user=> {
                 this.climber['name'] = user.name;
                 this.climber['picture'] = user.avatar;
-                this.climber['began'] = user.memberSince;
                 this.climber['home'] = user.location;
                 this.climber['sport'] = user.styles.Sport.lead;
                 this.climber['trad'] = user.styles.Trad.lead;
