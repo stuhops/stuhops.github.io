@@ -22,7 +22,7 @@ var climbing = new Vue({
             .then(ticks => ticks.json())
             .then(ticks => {
                 console.log(ticks);
-                for(let i = 0; this.tickList.length <= 6; i++) {
+                for(let i = 0; this.tickList.length <= 5; i++) {
                     let tmp = {};
                     tmp['data'] = ticks.ticks[i].date;
                     tmp['notes'] = ticks.ticks[i].notes;
