@@ -21,7 +21,7 @@ var app = new Vue({
         fetch('https://www.mountainproject.com/data/get-ticks?email=stwhop@gmail.com&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
             .then(ticks => ticks.json())
             .then(ticks => {
-                for(let i = 0; bigTmp.length < 6; i++) {
+                for(let i = 0; bigTmp.length < 7; i++) {
                     let tmp = {};
                     tmp['data'] = ticks.ticks[i].date;
                     tmp['notes'] = ticks.ticks[i].notes;
@@ -43,7 +43,7 @@ var app = new Vue({
                         .then(route => {
                             let tmp = bigTmp[i];
                             tmp['name'] = route.routes[0].name;
-                            tmp['img'] = route.routes[0].imgSmall;
+                            tmp['img'] = route.routes[0].imgMedium;
                             tmp['grade'] = route.routes[0].rating;
                             tmp['type'] = route.routes[0].type;
                             tmp['stars'] = route.routes[0].stars;

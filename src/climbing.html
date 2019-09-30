@@ -52,49 +52,72 @@
 </nav>
 
 <div id="welcome">
-    <div class="jumbotron jumbotron-fluid sectionHeaderPad d-flex align-items-center"
-         style="background-image: url('../data/hobbiesData/climbing/welcome.jpg');">
-        <div class="row mx-auto my-auto align-items-center">
-            <p class="display-3">Climbing</p>
+    <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/hobbiesData/climbing/welcome.jpg');">
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto align-items-center">
+                <div id="educationCarousel" class="carousel slide w-100">
+                    <div class="carousel-inner">
+                        <div class="carousel-item py-5 active">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-sm-10 align-center">
+                                    <div class="card-transparent">
+                                        <div class="card-body sectionHeaderTitle">
+                                            <p class="card-title display-3">Climbing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item py-5">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-sm-10 align-center">
+                                    <div class="card card-overlay">
+                                        <div class="card-body">
+                                            <h1 class="card-title">Climbing Bio</h1>
+                                            <p class="card-body">
+                                                    Stu Hopkins<br>
+                                                    {{ climber.home }}<br>
+                                                    21 years old - Male<br>
+                                                    <br>
+                                                    Climbing since Dec 17, 2017<br>
+                                                    <br>
+                                                    Hardest redpoint sport: {{ climber.sport }}<br>
+                                                    Hardest redpoint trad:  {{ climber.trad }}<br>
+                                                </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#educationCarousel" data-slide="prev">
+                        <span><img src="../data/Arrows/leftArrow.png"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#educationCarousel" data-slide="next" data-toggle="popover" title="Click Me!"
+                            data-content="Click here to see more information about Stuart's education">
+                        <span><img src="../data/Arrows/rightArrow.png"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 <div id="ticks" class="container">
-    <div class="card-deck">
-        <div class="card">
-            <image class="card-image-top rounded image-card" src="../data/hobbiesData/climbing/profilePict.jpg"></image>
-            <div class="card-body">
-                <h4>{{ climber.name }}</h4>
-                <p>{{ climber.home }}<br>
-                    21 years old - Male<br>
-                    <br>
-                    Climbing since Dec 17, 2017<br>
-                    <br>
-                    Hardest redpoint sport: {{ climber.sport }}<br>
-                    Hardest redpoint trad:  {{ climber.trad }}<br>
-                </p>
-
+    <div class="card">
+        <div class="card-header display-4">Recent Climbs</div>
+        <div class="card-body">
+            <div class="card-deck">
+                <div class="card" :id="tick['id']" v-for="tick in tickList">
+                    <image class="card-image-top rounded image-card" :src="tick['img']"></image>
+                    <div class="card-body">
+                        <h4>{{ tick['name'] }}</h4>
+                        <p>Stars: {{ tick['stars'] }}<br>
+                            Grade: {{ tick['grade'] }}<br>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="card" v-bind:id="tick['id']" v-for="tick in tickList">
-            <!--<image class="card-image-top rounded image-card" src={{ tick.img }}></image>-->
-            <div class="card-body">
-                    <p>Name: {{ tick['name'] }}</p>
-                <!--<h4>{{ tickList[0].name }}</h4>-->
-                <!--<p>Stars: {{ tickList[0].stars }}<br>-->
-                    <!--Grade: {{ tickList[0].grade }}<br>-->
-
-                <!--</p>-->
-
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">Stu's recent tick-list</div>
-            <div class="card-body">tick api goes here</div>
-        </div>
-
     </div>
 </div>
 
