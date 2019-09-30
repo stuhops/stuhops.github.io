@@ -54,3 +54,7 @@
     width: 100%;
     height: auto;
 }
+
+.card {
+    min-width: 300px;
+}

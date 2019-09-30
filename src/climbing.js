@@ -1,12 +1,13 @@
-var climbing = new Vue({
+var app = new Vue({
     el: '#app',
     data:{
-        climber: {name: 'Stu'},
-        tickList: [{}],
+        climber: {name: 'Loading...'},
+        tickList: [{'name': 'Loading....'}],
     },
     methods:{ },
 
     created(){
+        let bigTmp = [{}];
         fetch('https://www.mountainproject.com/data/get-user?email=stwhop@gmail.com&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
             .then(user => user.json())
             .then(user=> {
@@ -20,8 +21,7 @@ var climbing = new Vue({
         fetch('https://www.mountainproject.com/data/get-ticks?email=stwhop@gmail.com&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
             .then(ticks => ticks.json())
             .then(ticks => {
-                console.log(ticks);
-                for(let i = 0; this.tickList.length <= 5; i++) {
+                for(let i = 0; bigTmp.length < 6; i++) {
                     let tmp = {};
                     tmp['data'] = ticks.ticks[i].date;
                     tmp['notes'] = ticks.ticks[i].notes;
@@ -30,26 +30,35 @@ var climbing = new Vue({
                     tmp['leadStyle'] = ticks.ticks[i].leadStyle;
 
                     if (tmp.leadStyle == 'Redpoint' || tmp.leadStyle == 'Flash' || tmp.leadStyle == 'Onsite') {
-                        this.tickList.push(tmp)
+                        bigTmp.push(tmp)
                     }
                 }
-                console.log('ticks')
+                bigTmp.shift();
             })
             .then(ticks => {
-                console.log('routes');
-                for(let i = 1; i < this.tickList.length; i++) {  // the 'empty array' actually has an initial element so to get 6 entries offset
-                    fetch('https://www.mountainproject.com/data/get-routes?routeIds=' + this.tickList[i].id +
+                for(let i = 0; i < bigTmp.length; i++) {  // the 'empty array' actually has an initial element so to get 6 entries offset
+                    fetch('https://www.mountainproject.com/data/get-routes?routeIds=' + bigTmp[i].id +
                         '&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
                         .then(route => route.json())
                         .then(route => {
-                            this.tickList[i]['name'] = route.routes[0].name;
-                            this.tickList[i]['type'] = route.routes[0].type;
-                            this.tickList[i]['stars'] = route.routes[0].stars;
-                            this.tickList[i]['location'] = route.routes[0].location;
+                            bigTmp[i]['name'] = route.routes[0].name;
+                            bigTmp[i]['img'] = route.routes[0].imgSmall;
+                            bigTmp[i]['grade'] = route.routes[0].rating;
+                            bigTmp[i]['type'] = route.routes[0].type;
+                            bigTmp[i]['stars'] = route.routes[0].stars;
+                            bigTmp[i]['location'] = route.routes[0].location;
                         })
                 }
-                console.log(this.tickList)
+                let newTmp = [{}];
+                for(let i = 0; i < bigTmp.length; i++) {
+                    newTmp.push(bigTmp[i]);
+                }
+                newTmp.shift();
+                this.tickList = newTmp;
+                console.log(this.tickList);
             });
     },
 
 });
+
+

@@ -60,7 +60,6 @@
     </div>
 </div>
 
-<!--TODO: Make this functional-->
 <div id="ticks" class="container">
     <div class="card-deck">
         <div class="card">
@@ -79,9 +78,17 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-header">Stu's recent tick-list</div>
-            <div class="card-body">tick api goes here</div>
+        <div class="card" v-bind:id="tick['id']" v-for="tick in tickList">
+            <!--<image class="card-image-top rounded image-card" src={{ tick.img }}></image>-->
+            <div class="card-body">
+                    <p>Name: {{ tick['name'] }}</p>
+                <!--<h4>{{ tickList[0].name }}</h4>-->
+                <!--<p>Stars: {{ tickList[0].stars }}<br>-->
+                    <!--Grade: {{ tickList[0].grade }}<br>-->
+
+                <!--</p>-->
+
+            </div>
         </div>
         <div class="card">
             <div class="card-header">Stu's recent tick-list</div>
