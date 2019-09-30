@@ -103,14 +103,15 @@
     </div>
 </div>
 <div id="ticks" class="container">
-    <div class="card">
+    <div class="card" style="margin-top: 50px;">
         <div class="card-header display-4">Recent Climbs</div>
-        <div class="card-body">
+        <div class="card-body ">
             <div class="card-deck">
-                <div class="card" :id="tick['id']" v-for="tick in tickList">
+                <div class="card card-inner" :id="tick['id']" v-for="tick in tickList">
                     <image class="card-image-top rounded image-card" :src="tick['img']"></image>
                     <div class="card-body">
                         <h4>{{ tick['name'] }}</h4>
+                        <h6>{{ tick['city'] }}, {{ tick['state'] }}</h6>
                         <p>Stars: {{ tick['stars'] }}<br>
                             Grade: {{ tick['grade'] }}<br>
                         </p>
@@ -121,6 +122,24 @@
     </div>
 </div>
 
+<div id="to-do" class="container">
+    <div class="card" style="margin-top: 50px;">
+        <div class="card-header display-4">Top of to-do List</div>
+        <div class="card-body ">
+            <div class="card-deck">
+                <div class="card card-inner" :id="toDo['id']" v-for="toDo in toDoList">
+                    <image class="card-image-top rounded image-card" :src="toDo['img']"></image>
+                    <div class="card-body">
+                        <h4>{{ toDo['name'] }}</h4>
+                        <h6>{{ toDo['city'] }}, {{ toDo['state'] }}</h6>
+                        <p>Stars: {{ toDo['stars'] }}<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!--TODO: Make this functional-->
 <!--<div id="to-do" class="container">-->
     <!--<div class="card-deck">-->
