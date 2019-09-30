@@ -13,6 +13,7 @@
 }
 
 .card-weather-img {
+    object-fit: contain;
     height: 75vh;
 }
 
