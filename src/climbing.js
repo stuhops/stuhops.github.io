@@ -48,14 +48,13 @@ var app = new Vue({
                             tmp['type'] = route.routes[0].type;
                             tmp['stars'] = route.routes[0].stars;
                             tmp['location'] = route.routes[0].location;
-                            bigTmp[i] = tmp;
-                        })
-                        .then(route => {
-                            let tmp = bigTmp;
-                            this.tickList = tmp;
-                            console.log(this.tickList);
+                            bigTmp.splice(i, 1, tmp);
                         })
                 }
+            })
+            .then(ticks => {
+                this.tickList = bigTmp;
+                console.log(this.tickList);
             });
     },
 
