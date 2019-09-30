@@ -41,21 +41,21 @@ var app = new Vue({
                         '&key=200196715-97b9b2bc4fd25b11ebc4a5cf9d9fba13')
                         .then(route => route.json())
                         .then(route => {
-                            bigTmp[i]['name'] = route.routes[0].name;
-                            bigTmp[i]['img'] = route.routes[0].imgSmall;
-                            bigTmp[i]['grade'] = route.routes[0].rating;
-                            bigTmp[i]['type'] = route.routes[0].type;
-                            bigTmp[i]['stars'] = route.routes[0].stars;
-                            bigTmp[i]['location'] = route.routes[0].location;
+                            let tmp = bigTmp[i];
+                            tmp['name'] = route.routes[0].name;
+                            tmp['img'] = route.routes[0].imgSmall;
+                            tmp['grade'] = route.routes[0].rating;
+                            tmp['type'] = route.routes[0].type;
+                            tmp['stars'] = route.routes[0].stars;
+                            tmp['location'] = route.routes[0].location;
+                            bigTmp[i] = tmp;
+                        })
+                        .then(route => {
+                            let tmp = bigTmp;
+                            this.tickList = tmp;
+                            console.log(this.tickList);
                         })
                 }
-                let newTmp = [{}];
-                for(let i = 0; i < bigTmp.length; i++) {
-                    newTmp.push(bigTmp[i]);
-                }
-                newTmp.shift();
-                this.tickList = newTmp;
-                console.log(this.tickList);
             });
     },
 
