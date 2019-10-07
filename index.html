@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="src/style.css" media="screen">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -15,7 +15,7 @@
 <div id="app">
 
     <div id="welcome">
-        <div id=jumboStu class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/welcome.JPG');">
+        <div id=jumboStu class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/welcome.JPG');">
             <div class="row mx-auto my-auto align-items-center">
                 <p class="display-3">Stuart Hopkins</p>
             </div>
@@ -23,7 +23,7 @@
     </div>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="#"><img src="../data/indexData/logo-36.png" style="width:40px;"></a>
+        <a class="navbar-brand" href="#"><img src="data/indexData/logo-36.png" style="width:40px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,13 +36,13 @@
                     <a class="nav-link" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="Hobbies.html">Hobbies</a>
+                    <a class="nav-link" href="src/Hobbies.html">Hobbies</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="climbing.html">Climbing</a>
-                        <a class="dropdown-item" href="Hobbies.html#skiing">Skiing</a>
-                        <a class="dropdown-item" href="Hobbies.html#whitewater">Whitewater</a>
-                        <a class="dropdown-item" href="Hobbies.html#mountain-biking">Mtn. Biking</a>
-                        <a class="dropdown-item" href="Hobbies.html#hiking">Hiking</a>
+                        <a class="dropdown-item" href="src/climbing.html">Climbing</a>
+                        <a class="dropdown-item" href="src/Hobbies.html#skiing">Skiing</a>
+                        <a class="dropdown-item" href="src/Hobbies.html#whitewater">Whitewater</a>
+                        <a class="dropdown-item" href="src/Hobbies.html#mountain-biking">Mtn. Biking</a>
+                        <a class="dropdown-item" href="src/Hobbies.html#hiking">Hiking</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -55,7 +55,7 @@
                     <a class="nav-link" href="#languages">Languages</a>
                 </li>
             </ul>
-            <button class="btn btn-success ml-auto mr-1"><a href="../data/Stuart_Hopkins_Resume.pdf" download style="color:inherit;">Download
+            <button class="btn btn-success ml-auto mr-1"><a href="data/Stuart_Hopkins_Resume.pdf" download style="color:inherit;">Download
                 Resumé</a></button>
         </div>
     </nav>
@@ -71,7 +71,7 @@
     </div>
 
     <div id="education">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/education.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/education.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="educationCarousel" class="carousel slide w-100" data-interval="false">
@@ -108,11 +108,11 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#educationCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#educationCarousel" data-slide="next" data-toggle="popover" title="Click Me!"
                                 data-content="Click here to see more information about Stuart's education">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
     </div>
 
     <div id="experience">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/experience.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/experience.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="experienceCarousel" class="carousel slide w-100" data-interval="false">
@@ -166,10 +166,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#experienceCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#experienceCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
     </div>
 
     <div id="hobbies">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/hobbies.gif');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/hobbies.gif');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="hobbiesCarousel" class="carousel slide w-100" data-interval="false">
@@ -217,10 +217,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#hobbiesCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#hobbiesCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
     </div>
 
     <div id="leadership">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/leadership.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/leadership.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="leadershipCarousel" class="carousel slide w-100" data-interval="false">
@@ -267,10 +267,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#leadershipCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#leadershipCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -279,7 +279,7 @@
     </div>
 
     <div id="service">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/service.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/service.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="serviceCarousel" class="carousel slide w-100" data-interval="false">
@@ -322,10 +322,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#serviceCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#serviceCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -334,7 +334,7 @@
     </div>
 
     <div id="languages">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/languages.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/languages.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="languagesCarousel" class="carousel slide w-100" data-interval="false">
@@ -367,10 +367,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#languagesCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#languagesCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -379,7 +379,7 @@
     </div>
 
     <div id="resume">
-        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('../data/indexData/resume.jpg');">
+        <div class="jumbotron jumbotron-fluid sectionHeader d-flex align-items-center" style="background-image: url('data/indexData/resume.jpg');">
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto align-items-center">
                     <div id="resumeCarousel" class="carousel slide w-100" data-interval="false">
@@ -406,7 +406,7 @@
                                                     <br>contact him through the provided means on
                                                     <br>his resumé.
                                                 </p>
-                                                <button class="btn btn-success ml-auto mr-1"><a href="../data/Stuart_Hopkins_Resume.pdf"
+                                                <button class="btn btn-success ml-auto mr-1"><a href="data/Stuart_Hopkins_Resume.pdf"
                                                                                                 download style="color:inherit;">Download
                                                                                                 Resumé</a></button>
                                             </div>
@@ -416,10 +416,10 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#resumeCarousel" data-slide="prev">
-                            <span><img src="../data/Arrows/leftArrow.png"></span>
+                            <span><img src="data/Arrows/leftArrow.png"></span>
                         </a>
                         <a class="carousel-control-next" href="#resumeCarousel" data-slide="next">
-                            <span><img src="../data/Arrows/rightArrow.png"></span>
+                            <span><img src="data/Arrows/rightArrow.png"></span>
                         </a>
                     </div>
                 </div>
@@ -427,7 +427,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="index.js"></script>
 
 </div>
 </body>
