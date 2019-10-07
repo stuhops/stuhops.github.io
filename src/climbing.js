@@ -30,7 +30,6 @@ var app = new Vue({
                     tmp['id'] = ticks.ticks[i].routeId;
                     tmp['leadStyle'] = ticks.ticks[i].leadStyle;
 
-                    console.log(ticks);
                     if (tmp.leadStyle === 'Redpoint' || tmp.leadStyle === 'Flash' || tmp.leadStyle === 'Onsight') {
                         bigTmp.push(tmp)
                     }
