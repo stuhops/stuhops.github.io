@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css" media="screen">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -104,24 +105,26 @@
   </div>
 
   <div id="ticks" class="container">
-  <div class="card" style="margin-top: 50px;">
-    <div class="card-header display-4">Recent Climbs</div>
-      <div class="card-body ">
-        <div class="card-deck">
-          <div class="card card-inner" :id="tick['id']" v-for="tick in tickList">
-            <image class="card-image-top rounded image-card" :src="tick['img']"></image>
-            <div class="card-body">
-              <h4>{{ tick['name'] }}</h4>
-              <h6>{{ tick['city'] }}, {{ tick['state'] }}</h6>
-              <p>Stars: {{ tick['stars'] }}<br>
-                  Grade: {{ tick['grade'] }}<br>
-                  Notes: "{{ tick['notes'] }}"
-              </p>
+    <div class="card" style="margin-top: 50px;">
+      <div class="card-header display-4">Recent Climbs</div>
+        <div class="card-body ">
+          <div class="card-deck">
+            <div class="card card-inner" :id="tick['id']" v-for="tick in tickList">
+              <image class="card-image-top rounded image-card" :src="tick['img']"></image>
+              <div class="card-body">
+                <h4>{{ tick['name'] }}</h4>
+                <h6>{{ tick['city'] }}, {{ tick['state'] }}</h6>
+
+                <p>Stars: {{ tick['stars'] }}
+                  <!--<span v-for="star in tick.stars">'this is a star'</span><br>-->
+                    Grade: {{ tick['grade'] }}<br>
+                    Notes: "{{ tick['notes'] }}"
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-  </div>
+    </div>
   </div>
 
   <div id="to-do" class="container">
@@ -365,6 +368,7 @@
       </div>
     </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="climbing.js"></script>
 
