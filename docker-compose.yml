@@ -9,7 +9,6 @@ services:
       dockerfile: Dockerfile.dev
     stdin_open: true
     ports:
-      # - ${PUBLIC_API_PORT:-4200}:4200
-      - 4200:4200
+      - ${PUBLIC_API_PORT:-4200}:4200
     volumes:
       - ./:/usr/src/
