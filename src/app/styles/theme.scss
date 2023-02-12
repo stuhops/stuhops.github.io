@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+$topnav-height: 56px;
+
+$grayscale: mat.define-palette(mat.$grey-palette, 800, 300, 900, 900);
+
+$primary: $grayscale;
+$accent: map.merge(
+  mat.define-palette(mat.$amber-palette, 300),
+  (
+    'lightest': map.get(mat.$amber-palette, 50),
+    'darkest': map.get(mat.$amber-palette, 600),
+  )
+);
+$warn: mat.define-palette(mat.$yellow-palette);
+$danger: mat.define-palette(mat.$red-palette);
+$text-gray: (
+  'lightest': hsl(0, 0%, 80%),
+  'light': hsl(0, 0%, 60%),
+  'lighter': hsl(0, 0%, 40%),
+  'default': hsl(0, 0%, 20%),
+  'darker': hsl(0, 0%, 10%),
+  'dark': hsl(0, 0%, 5%),
+  'darkest': (
+    0,
+    0%,
+    0%,
+  ),
+);
+
+$background-levels: (
+  darkest: hsl(0, 0%, 77%),
+  dark: hsl(0, 0%, 89%),
+  darker: hsl(0, 0%, 95%),
+  base: hsl(0, 0%, 98%),
+  mid: hsl(0, 0%, 99.5%),
+  top: hsl(0, 0%, 100%),
+);
+
+$theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+  )
+);

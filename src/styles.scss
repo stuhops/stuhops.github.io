@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@forward './app/styles/theme';
+@use './app/styles/theme' as theme;
+
+a {
+  cursor: pointer;
+}
+
+.col .row {
+  flex: 1;
+}
+
+.mat-icon {
+  font-family: 'Material Icons';
+}
+
+.mat-flat-button {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.cap-first::first-letter {
+  text-transform: capitalize;
+}
