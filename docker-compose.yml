@@ -1,0 +1,15 @@
+version: "3.8"
+name: "Resume Angular"
+
+services:
+  client:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    stdin_open: true
+    ports:
+      # - ${PUBLIC_API_PORT:-4200}:4200
+      - 4200:4200
+    volumes:
+      - ./:/usr/src/
