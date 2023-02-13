@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     title: 'Stuart Hopkins',
     path: '**',
-    component: HomePageComponent,
+    component: QrCodeGeneratorComponent, // TODO: Update to home page component once built
   },
 ];
 
