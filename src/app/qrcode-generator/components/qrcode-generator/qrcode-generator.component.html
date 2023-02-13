@@ -1,0 +1,16 @@
+<div class="contents">
+  <h1>QR Code Generator</h1>
+  <p>Start typing your url to see the qr code auto-generate</p>
+
+  <mat-form-field class="row form">
+    <mat-label>QR Code Url</mat-label>
+    <input matInput type="text" [(ngModel)]="url" />
+    <button *ngIf="url" matSuffix mat-icon-button aria-label="Clear" (click)="url = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="row qrcodeImage">
+    <app-qrcode [url]="url"></app-qrcode>
+  </div>
+</div>

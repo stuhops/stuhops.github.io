@@ -45,5 +45,7 @@ $theme: mat.define-light-theme(
       accent: $accent,
       warn: $warn,
     ),
+    typography: mat.define-typography-config(),
+    density: 0,
   )
 );

@@ -1,18 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@use '@angular/material' as mat;
 @forward './app/styles/theme';
+@use '@angular/material' as mat;
 @use './app/styles/theme' as theme;
+
+@include mat.core();
+@include mat.all-component-themes(theme.$theme);
+//  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  box-sizing: border-box;
+}
 
 a {
   cursor: pointer;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
 
-.col .row {
+.col .row .flex {
   flex: 1;
 }
 
