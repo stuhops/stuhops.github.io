@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-qrcode',
@@ -6,7 +7,19 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrCodeComponent {
-  @Input() backgroundColor: string = '#ffffff';
-  @Input() codeColor: string = '#000000';
+  @Input() backgroundColor?: string;
+  @Input() codeColor?: string;
+  @Input() showDownloadButton: boolean = true;
   @Input() url: string = '';
+  @Output() qrCodeChange = new EventEmitter<SafeUrl>();
+  private _qrCodeURL: SafeUrl = '';
+
+  get qrCodeURL(): SafeUrl {
+    return this._qrCodeURL;
+  }
+
+  set qrCodeURL(next: SafeUrl) {
+    this._qrCodeURL = next;
+    this.qrCodeChange.emit(this._qrCodeURL);
+  }
 }

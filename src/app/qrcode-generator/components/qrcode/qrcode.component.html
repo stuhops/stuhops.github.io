@@ -4,15 +4,22 @@
     [allowEmptyString]="false"
     [ariaLabel]="'QR Code image pointing to' + url"
     [cssClass]="'center'"
-    [colorDark]="codeColor"
-    [colorLight]="backgroundColor"
+    [colorDark]="codeColor ?? '#000000'"
+    [colorLight]="backgroundColor ?? '#ffffff'"
     [elementType]="'img'"
     [errorCorrectionLevel]="'M'"
     [imageHeight]="75"
     [imageWidth]="75"
     [margin]="4"
     [scale]="1"
-    [title]="'A custom title attribute'"
     [width]="300"
+    (qrCodeURL)="qrCodeURL = $event"
   ></qrcode>
+
+  <a download class="download-link" [href]="qrCodeURL">
+    <button *ngIf="showDownloadButton" download mat-flat-button color="accent">
+      <mat-icon>download</mat-icon>
+      Download
+    </button>
+  </a>
 </div>
