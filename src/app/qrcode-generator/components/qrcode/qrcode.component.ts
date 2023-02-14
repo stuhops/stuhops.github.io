@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./qrcode.component.scss'],
 })
 export class QrCodeComponent {
+  @Input() backgroundColor: string = '#ffffff';
+  @Input() codeColor: string = '#000000';
   @Input() url: string = '';
 }

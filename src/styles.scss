@@ -21,8 +21,12 @@ html {
   padding: 0;
 }
 
-.col .row .flex {
+.col,
+.row,
+.flex {
+  display: flex;
   flex: 1;
+  gap: 1rem;
 }
 
 .mat-icon {
