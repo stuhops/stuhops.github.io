@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing/app-routing.module';
-import { MaterialModule } from './material/material.module';
+import { AppRoutingModule } from './app.router';
 import { AppComponent } from './components/app/app.component';
-import { HomePageModule } from './home-page/home-page.module';
-import { QrCodeGeneratorModule } from './qrcode-generator/qrcode-generator.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, HomePageModule, QrCodeGeneratorModule],
+  imports: [BrowserAnimationsModule, BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

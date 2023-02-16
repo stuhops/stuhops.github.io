@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { SharedModule } from '../shared/shared.module';
 import { BannerImageComponent } from './components/banner-image/banner-image.component';
+import { HomePageRouterModule } from './home-page.router';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HomePageComponent, BannerImageComponent],
-  imports: [CommonModule, SharedModule],
+  imports: [HomePageRouterModule, SharedModule],
 })
 export class HomePageModule {}
