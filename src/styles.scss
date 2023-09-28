@@ -15,6 +15,41 @@ a {
   cursor: pointer;
 }
 
+$min-title-size: 6rem;
+$font-growth: 0.25;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: calc($min-title-size * 6 * $font-growth);
+}
+
+h2 {
+  font-size: calc($min-title-size * 5 * $font-growth);
+}
+
+h3 {
+  font-size: calc($min-title-size * 4 * $font-growth);
+}
+
+h4 {
+  font-size: calc($min-title-size * 3 * $font-growth);
+}
+
+h5 {
+  font-size: calc($min-title-size * 2 * $font-growth);
+}
+
+h6 {
+  font-size: calc($min-title-size * 1 * $font-growth);
+}
+
 body,
 html {
   margin: 0;
@@ -24,9 +59,17 @@ html {
 .col,
 .row,
 .flex {
-  display: flex;
   flex: 1;
   gap: 1rem;
+}
+
+.col,
+.row {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
 }
 
 .mat-icon {

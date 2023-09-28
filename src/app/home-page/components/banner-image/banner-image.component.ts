@@ -1,21 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'home-page-banner-image',
   templateUrl: './banner-image.component.html',
   styleUrls: ['./banner-image.component.scss'],
 })
-export class BannerImageComponent implements OnInit {
-  @Input() imageSource!: string;
-
-  ngOnInit(): void {
-    this._validateInputs();
-  }
-
-  _validateInputs(): void {
-    let problem: string | null = null;
-    if (!this.imageSource) problem = 'imageSource';
-    if (problem)
-      throw Error(`Cannot access banner-image component without a valid ${problem} input`);
-  }
+export class BannerImageComponent {
+  @Input({ required: true }) imageSource!: string;
+  @Input() statement: string = 'Full Stack\nDeveloper.';
+  resumeDownload = `${environment.assetPrefix}${environment.resume.download}`;
+  email = environment.resume.email;
 }
