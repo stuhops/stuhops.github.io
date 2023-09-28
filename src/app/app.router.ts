@@ -3,13 +3,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () => import('./home-page/home-page.module').then((m) => m.HomePageModule),
+  },
+  {
     path: 'qrcode',
     loadChildren: () =>
       import('./qrcode-generator/qrcode-generator.module').then((m) => m.QrCodeGeneratorModule),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home-page/home-page.module').then((m) => m.HomePageModule),
+    path: 'frogger',
+    loadChildren: () => import('./frogger/frogger.module').then((m) => m.FroggerModule),
   },
   {
     path: '**',
