@@ -4,9 +4,15 @@ import { BannerImageComponent } from './components/banner-image/banner-image.com
 import { HomePageRouterModule } from './home-page.router';
 import { SharedModule } from '../shared/shared.module';
 import { SingleImageStatementComponent } from './components/single-image-statement/single-image-statement.component';
+import { SkillListComponent } from './components/skill-list/skill-list.component';
 
 @NgModule({
-  declarations: [HomePageComponent, BannerImageComponent, SingleImageStatementComponent],
+  declarations: [
+    HomePageComponent,
+    BannerImageComponent,
+    SingleImageStatementComponent,
+    SkillListComponent,
+  ],
   imports: [HomePageRouterModule, SharedModule],
 })
 export class HomePageModule {}

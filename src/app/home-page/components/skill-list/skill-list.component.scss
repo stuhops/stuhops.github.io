@@ -1,0 +1,33 @@
+@use '/src/styles.scss' as styles;
+
+.contents {
+  color: map-get(styles.$text-gray, lightest);
+  background-color: map-get(styles.$backround-levels-dark, default);
+  min-height: 50vh;
+  padding: 5rem;
+
+  & > .col {
+    justify-content: center;
+    align-items: center;
+
+    h6 {
+      color: map-get(styles.$warn, default);
+    }
+  }
+
+  h3 {
+    color: map-get(styles.$text-gray, lightest);
+  }
+
+  .row {
+    max-width: 100rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
