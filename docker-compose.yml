@@ -1,5 +1,5 @@
 version: "3.8"
-name: "Resume Angular"
+name: "resume-angular"
 
 services:
   client:

@@ -1,0 +1,32 @@
+.contents {
+  width: 100%;
+  min-height: 90vh;
+  padding: 10rem 5rem;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    max-width: 1920px;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    .align-right {
+      align-items: flex-end;
+    }
+
+    img {
+      flex: 1;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+}
