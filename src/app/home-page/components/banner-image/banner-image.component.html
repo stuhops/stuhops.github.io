@@ -3,10 +3,14 @@
     <h2>{{ statement }}</h2>
     <div class="row">
       <a href="mailTo:{{ email }}">
-        <button mat-stroked-button>Contact Stu</button>
+        <shared-stroked-button [stroke]="BasicColors.accent">
+          <span class="white-text">Contact Stu</span>
+        </shared-stroked-button>
       </a>
       <a download [href]="resumeDownload">
-        <button mat-button>Download Resume</button>
+        <shared-stroked-button>
+          <span class="white-text">Download Resume</span>
+        </shared-stroked-button>
       </a>
     </div>
   </div>

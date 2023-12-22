@@ -1,0 +1,10 @@
+<button
+  mat-stroked-button
+  class="button"
+  [class.strokeNone]="stroke === null"
+  [class.strokeAccent]="stroke === StrokeColors.accent"
+  [class.strokePrimary]="stroke === StrokeColors.primary"
+  [class.strokeWarn]="stroke === StrokeColors.warn"
+>
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,8 @@
+@use '/src/styles.scss' as styles;
+
+.button,
+button {
+  padding: 2rem 3rem;
+  border-width: 2px;
+  color: map-get(styles.$text-gray, lightest);
+}

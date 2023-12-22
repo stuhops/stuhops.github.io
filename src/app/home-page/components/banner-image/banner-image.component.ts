@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { BasicColors } from 'src/app/shared/basic-colors.model';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class BannerImageComponent {
   @Input({ required: true }) imageSource!: string;
   @Input() statement: string = 'Full Stack\nDeveloper.';
+  BasicColors = BasicColors;
   resumeDownload = `${environment.assetPrefix}${environment.resume.download}`;
   email = environment.resume.email;
 }
