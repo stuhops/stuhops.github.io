@@ -1,0 +1,18 @@
+@use '/src/styles.scss' as styles;
+
+.contents {
+  min-height: 20rem;
+  background-color: map-get(styles.$background-levels-dark, default);
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+
+  * {
+    text-align: center;
+    color: map-get(styles.$text-gray, lightest);
+  }
+
+  & > div {
+    gap: 3rem;
+  }
+}
