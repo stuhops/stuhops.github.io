@@ -1,3 +1,15 @@
-<div class="contents" style="background-image: url('{{ image }}');">
-  <div class="col"></div>
-</div>
+<a href="{{ href }}">
+  <div class="contents" style="background-image: url('{{ image }}');">
+    <div class="col">
+      <h4>{{ title }}</h4>
+      <ul class="flex">
+        <li *ngFor="let statement of statements">{{ statement }}</li>
+      </ul>
+      <div class="row">
+        <shared-stroked-button *ngIf="button" [lightText]="true" [stroke]="BasicColors.accent">
+          {{ button }}
+        </shared-stroked-button>
+      </div>
+    </div>
+  </div>
+</a>

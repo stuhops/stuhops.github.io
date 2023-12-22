@@ -1,13 +1,44 @@
 <div class="contents row">
   <div class="col">
-    <h3>My work</h3>
+    <div class="header col">
+      <h3>My experience</h3>
+      <p class="subtitle">Take a look at some of my work</p>
+    </div>
     <div class="row">
-      <home-page-my-work-card class="card flex"></home-page-my-work-card>
-      <home-page-my-work-card class="card middle-card flex"></home-page-my-work-card>
-      <home-page-my-work-card class="card flex"></home-page-my-work-card>
+      <home-page-my-work-card
+        button="USU"
+        class="card flex"
+        title="USU Networking"
+        [statements]="[
+          'Built and maintained key websites to manage user registration and access to the network',
+          'Constructed management platforms for the networking team to monitor network performance',
+          'Upgraded critical emergency communication software to modern REST API protocols in compliance with local police statutes'
+        ]"
+      >
+      </home-page-my-work-card>
+      <home-page-my-work-card
+        button="Visit Guru"
+        class="card middle-card flex"
+        title="Guru Technologies"
+        [statements]="[
+          'Technology lead on a project with 6 developers, consistently meeting client deadlines',
+          'Lead engineer on a heavily integrated business management application for a company with $18.8M in yearly revenue',
+          'Head Angular developer over 5 separate projects including mentoring new hires and defining direction for existing employees',
+          'Worked hand in hand with clients to define their MVP, resolve competing requirements, and stay within budget',
+          'Designed and developed frontend UI/UX, backend database architecture, and Gitlab/AWS devops for multiple projects'
+        ]"
+      ></home-page-my-work-card>
+      <home-page-my-work-card
+        button="Play Frogger"
+        class="card flex"
+        title="Personal Projects"
+        [statements]="['Frogger']"
+      ></home-page-my-work-card>
     </div>
     <a href="{{ environment.resume.github }}">
-      <shared-stroked-button [stroke]="BasicColors.accent">GitHub</shared-stroked-button>
+      <shared-stroked-button [oversized]="true" [stroke]="BasicColors.accent">
+        GitHub
+      </shared-stroked-button>
     </a>
   </div>
 </div>

@@ -88,3 +88,8 @@ h6 {
 .cap-first::first-letter {
   text-transform: capitalize;
 }
+
+.subtitle {
+  font-size: 1.5rem;
+  color: map-get(theme.$text-gray, lighter);
+}
