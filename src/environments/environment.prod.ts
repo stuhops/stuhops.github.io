@@ -5,5 +5,6 @@ export const environment: EnvironmentInterface = {
   resume: {
     download: 'main-profile-image.jpg',
     email: 'stuart.hops@gmail.com',
+    github: 'https://github.com/stuhops',
   },
 };

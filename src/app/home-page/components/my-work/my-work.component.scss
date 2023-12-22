@@ -6,9 +6,27 @@
   background-color: map-get(styles.$background-levels, default);
   padding: 5rem;
 
-  & > div {
+  & > .col {
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
     h3 {
       text-align: center;
+    }
+
+    & > .row {
+      justify-content: space-between;
+      width: 100%;
+      gap: 5rem;
+
+      .card {
+        height: 30rem;
+
+        &.middle-card {
+          margin-top: 5rem;
+        }
+      }
     }
   }
 }

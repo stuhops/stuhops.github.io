@@ -3,5 +3,6 @@ export interface EnvironmentInterface {
   resume: {
     download: string;
     email: string;
+    github: string;
   };
 }

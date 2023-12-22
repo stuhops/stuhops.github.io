@@ -7,6 +7,7 @@ import { SingleImageStatementComponent } from './components/single-image-stateme
 import { SkillListComponent } from './components/skill-list/skill-list.component';
 import { MyWorkComponent } from './components/my-work/my-work.component';
 import { OutsideOfWorkBannerComponent } from './components/outside-of-work-banner/outside-of-work-banner.component';
+import { MyWorkCardComponent } from './components/my-work-card/my-work-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OutsideOfWorkBannerComponent } from './components/outside-of-work-banne
     SkillListComponent,
     MyWorkComponent,
     OutsideOfWorkBannerComponent,
+    MyWorkCardComponent,
   ],
   imports: [HomePageRouterModule, SharedModule],
 })

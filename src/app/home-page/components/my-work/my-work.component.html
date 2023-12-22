@@ -1,5 +1,13 @@
 <div class="contents row">
-  <div class="flex">
+  <div class="col">
     <h3>My work</h3>
+    <div class="row">
+      <home-page-my-work-card class="card flex"></home-page-my-work-card>
+      <home-page-my-work-card class="card middle-card flex"></home-page-my-work-card>
+      <home-page-my-work-card class="card flex"></home-page-my-work-card>
+    </div>
+    <a href="{{ environment.resume.github }}">
+      <shared-stroked-button [stroke]="BasicColors.accent">GitHub</shared-stroked-button>
+    </a>
   </div>
 </div>
