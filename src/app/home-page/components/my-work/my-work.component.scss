@@ -1,0 +1,33 @@
+@use '/src/styles.scss' as styles;
+
+.contents {
+  justify-content: center;
+  align-items: center;
+  background-color: map-get(styles.$background-levels, default);
+  padding: 5rem;
+
+  & > .col {
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    .header {
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    & > .row {
+      justify-content: space-between;
+      width: 100%;
+      gap: 5rem;
+
+      .card {
+        height: 30rem;
+
+        &.middle-card {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+}

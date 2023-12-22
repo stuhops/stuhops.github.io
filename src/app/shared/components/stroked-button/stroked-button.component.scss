@@ -1,0 +1,30 @@
+@use '/src/styles.scss' as styles;
+
+// ng-deep so we can remove the context of ng-content
+::ng-deep .stroked-button-component {
+  &.light-text {
+    * {
+      color: map-get(styles.$text-gray, lightest);
+    }
+  }
+}
+
+.oversized {
+  padding: 2rem 3rem;
+}
+
+.strokeAccent {
+  border-color: map-get(styles.$accent, default) !important;
+}
+
+.strokePrimary {
+  border-color: map-get(styles.$primary, default) !important;
+}
+
+.strokePrimary {
+  border-color: map-get(styles.$warn, default) !important;
+}
+
+.strokeNone {
+  border: 0 transparent solid;
+}

@@ -13,13 +13,6 @@
     max-width: 1080px;
   }
 
-  button {
-    padding: 2rem 3rem;
-    border-color: map-get(styles.$accent, default);
-    border-width: 2px;
-    color: map-get(styles.$text-gray, lightest);
-  }
-
   h2 {
     color: map-get(styles.$text-gray, lightest);
     white-space: pre-line;

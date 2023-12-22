@@ -2,7 +2,7 @@
 
 .contents {
   color: map-get(styles.$text-gray, lightest);
-  background-color: map-get(styles.$backround-levels-dark, default);
+  background-color: map-get(styles.$background-levels-dark, default);
   min-height: 50vh;
   padding: 5rem;
 
