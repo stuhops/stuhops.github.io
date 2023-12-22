@@ -7,6 +7,8 @@ import { BasicColors } from '../../basic-colors.model';
   styleUrls: ['../../styles/basic-button.style.scss', './stroked-button.component.scss'],
 })
 export class StrokedButtonComponent {
+  @Input() lightText: boolean = false;
+  @Input() oversized: boolean = false;
   @Input() stroke: BasicColors | null = null;
   StrokeColors = BasicColors;
 }

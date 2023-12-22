@@ -2,7 +2,7 @@
 
 .button,
 button {
-  padding: 2rem 3rem;
+  padding: 0.5rem 1rem;
   border-width: 2px;
   color: map-get(styles.$text-gray, lightest);
 }

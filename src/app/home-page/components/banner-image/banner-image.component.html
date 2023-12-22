@@ -3,13 +3,13 @@
     <h2>{{ statement }}</h2>
     <div class="row">
       <a href="mailTo:{{ email }}">
-        <shared-stroked-button [stroke]="BasicColors.accent">
-          <span class="white-text">Contact Stu</span>
+        <shared-stroked-button [lightText]="true" [oversized]="true" [stroke]="BasicColors.accent">
+          Contact Stu
         </shared-stroked-button>
       </a>
       <a download [href]="resumeDownload">
-        <shared-stroked-button>
-          <span class="white-text">Download Resume</span>
+        <shared-stroked-button [lightText]="true" [oversized]="true">
+          Download Resume
         </shared-stroked-button>
       </a>
     </div>
