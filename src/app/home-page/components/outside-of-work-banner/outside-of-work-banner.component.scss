@@ -7,8 +7,28 @@
   padding: 5rem;
 
   & > div {
-    h3 {
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    .header {
       text-align: center;
+      gap: 0.5rem;
+    }
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      @media (max-width: 760px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      & > * {
+        width: 10rem;
+        height: 10rem;
+      }
     }
   }
 }

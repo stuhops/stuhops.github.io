@@ -1,5 +1,18 @@
 <div class="contents row">
-  <div class="flex">
-    <h3>Stu outside of the office</h3>
+  <div class="col">
+    <div class="header col">
+      <h3>Stu outside of the office</h3>
+      <p class="subtitle">
+        Relating to clients and coworkers is easier with hobbies outside of work. Here are a few of
+        mine!
+      </p>
+    </div>
+    <div class="tiles">
+      <home-page-square-photo-tile
+        *ngFor="let photo of photos"
+        [image]="photo.image"
+        [subtitle]="photo.subtitle"
+      ></home-page-square-photo-tile>
+    </div>
   </div>
 </div>

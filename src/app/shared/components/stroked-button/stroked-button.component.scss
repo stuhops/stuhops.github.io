@@ -9,6 +9,14 @@
   }
 }
 
+.stroked-button-component {
+  transition: all 200ms;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
 .oversized {
   padding: 2rem 3rem;
 }

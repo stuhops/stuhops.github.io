@@ -8,6 +8,7 @@ import { SkillListComponent } from './components/skill-list/skill-list.component
 import { MyWorkComponent } from './components/my-work/my-work.component';
 import { OutsideOfWorkBannerComponent } from './components/outside-of-work-banner/outside-of-work-banner.component';
 import { MyWorkCardComponent } from './components/my-work-card/my-work-card.component';
+import { SquarePhotoTileComponent } from './components/square-photo-tile/square-photo-tile.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MyWorkCardComponent } from './components/my-work-card/my-work-card.comp
     MyWorkComponent,
     OutsideOfWorkBannerComponent,
     MyWorkCardComponent,
+    SquarePhotoTileComponent,
   ],
   imports: [HomePageRouterModule, SharedModule],
 })
