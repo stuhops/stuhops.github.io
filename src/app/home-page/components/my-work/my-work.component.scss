@@ -18,17 +18,27 @@
 
     & > .row {
       justify-content: center;
+      flex-wrap: wrap;
       width: 100%;
       gap: 5rem;
 
       .card {
         height: 30rem;
         max-width: 25rem;
-
-        &.middle-card {
-          margin-top: 2.5rem;
-        }
+        min-width: 300px;
       }
     }
+  }
+}
+
+@media (min-width: map-get(styles.$breakpoints, large)) {
+  .middle-card {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: map-get(styles.$breakpoints, large)) {
+  .middle-card {
+    margin-top: 0;
   }
 }

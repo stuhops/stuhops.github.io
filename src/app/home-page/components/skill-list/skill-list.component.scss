@@ -16,13 +16,20 @@
   }
 
   h3 {
+    text-align: center;
     color: map-get(styles.$text-gray, lightest);
   }
 
   .row {
     max-width: 100rem;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+
+    & > div {
+      min-width: 10rem;
+    }
   }
 }
 
