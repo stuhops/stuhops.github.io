@@ -10,5 +10,6 @@ export class StrokedButtonComponent {
   @Input() lightText: boolean = false;
   @Input() oversized: boolean = false;
   @Input() stroke: BasicColors | null = null;
+  @Input() textShadow: boolean = false;
   StrokeColors = BasicColors;
 }

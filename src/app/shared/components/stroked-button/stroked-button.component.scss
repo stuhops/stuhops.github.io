@@ -7,6 +7,13 @@
       color: map-get(styles.$text-gray, lightest);
     }
   }
+
+  &.text-shadow {
+    * {
+      text-shadow: black 0 0 2px;
+      text-shadow: black 0 0 8px;
+    }
+  }
 }
 
 .stroked-button-component {
@@ -19,6 +26,12 @@
 
 .oversized {
   padding: 2rem 3rem;
+
+  @media (max-width: map-get(styles.$breakpoints, large)) {
+    & {
+      padding: 1.5rem 2rem;
+    }
+  }
 }
 
 .strokeAccent {

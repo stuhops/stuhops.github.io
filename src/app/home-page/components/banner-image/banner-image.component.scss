@@ -11,10 +11,22 @@
 
   & > div {
     max-width: 1080px;
+
+    .buttons {
+      flex: none;
+      flex-wrap: wrap;
+
+      .drop-shadow {
+        background-color: rgba(0, 0, 0, 0.3);
+
+        backdrop-filter: blur(4px);
+      }
+    }
   }
 
   h2 {
     color: map-get(styles.$text-gray, lightest);
     white-space: pre-line;
+    text-shadow: black 0 0 10px;
   }
 }
