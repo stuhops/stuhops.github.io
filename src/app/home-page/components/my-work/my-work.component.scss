@@ -17,12 +17,13 @@
     }
 
     & > .row {
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       gap: 5rem;
 
       .card {
         height: 30rem;
+        max-width: 25rem;
 
         &.middle-card {
           margin-top: 2.5rem;
