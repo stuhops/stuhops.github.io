@@ -3,12 +3,17 @@
     <h2>{{ statement }}</h2>
     <div class="row buttons">
       <a href="mailTo:{{ email }}" class="drop-shadow">
-        <shared-stroked-button [lightText]="true" [oversized]="true" [stroke]="BasicColors.accent">
+        <shared-stroked-button
+          [lightText]="true"
+          [oversized]="true"
+          [stroke]="BasicColors.accent"
+          [textShadow]="true"
+        >
           Contact Stu
         </shared-stroked-button>
       </a>
       <a download [href]="resumeDownload" class="drop-shadow">
-        <shared-stroked-button [lightText]="true" [textShadow]="true" [oversized]="true">
+        <shared-stroked-button [lightText]="true" [oversized]="true" [textShadow]="true">
           Download Resume
         </shared-stroked-button>
       </a>

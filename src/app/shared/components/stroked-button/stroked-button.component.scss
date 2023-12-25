@@ -10,8 +10,7 @@
 
   &.text-shadow {
     * {
-      text-shadow: black 0 0 2px;
-      text-shadow: black 0 0 8px;
+      text-shadow: black 0 0 2px, black 0 0 4px, black 0 0 8px;
     }
   }
 }
