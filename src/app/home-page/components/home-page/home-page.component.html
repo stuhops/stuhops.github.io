@@ -1,5 +1,8 @@
 <div class="contents">
-  <home-page-banner-image [imageSource]="environment.assetPrefix + 'main-profile-image.jpg'" />
+  <home-page-banner-image
+    [imageSource]="environment.assetPrefix + 'main-profile-image/small.jpg'"
+    [imageSizes]="bannerImageSizes"
+  />
   <home-page-single-image-statement
     description="Not only do I love to build great websites, I love to make them look and feel beautiful too. I don't believe a website is complete until the frontend, backend, and documentation are complete."
     title="My passion is full-stack web development"

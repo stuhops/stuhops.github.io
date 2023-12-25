@@ -43,6 +43,7 @@ $background-levels-dark: (
   default: hsl(0, 0%, 5%),
 );
 
+// Change these if you update the environment breakpoints. Cannot insert from js file
 $breakpoints: (
   xs: 360px,
   small: 440px,

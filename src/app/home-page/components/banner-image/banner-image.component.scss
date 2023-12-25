@@ -9,6 +9,18 @@
   justify-content: center;
   align-items: center;
 
+  @media (min-width: map-get(styles.$breakpoints, medium)) {
+    & {
+      background-position: 33%;
+    }
+  }
+
+  @media (max-width: map-get(styles.$breakpoints, medium)) {
+    & {
+      background-position-y: 50%;
+    }
+  }
+
   & > div {
     max-width: 1080px;
 
