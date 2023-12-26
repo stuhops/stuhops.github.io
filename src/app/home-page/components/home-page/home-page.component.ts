@@ -28,9 +28,5 @@ export class HomePageComponent {
       file: `${environment.assetPrefix}main-profile-image/large.jpg`,
       minWidth: environment.breakpoints.large,
     },
-    {
-      file: `${environment.assetPrefix}main-profile-image/xl.jpg`,
-      minWidth: environment.breakpoints.xl,
-    },
   ];
 }
