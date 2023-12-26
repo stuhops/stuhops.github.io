@@ -30,15 +30,3 @@
     }
   }
 }
-
-@media (min-width: map-get(styles.$breakpoints, large)) {
-  .middle-card {
-    margin-top: 2.5rem;
-  }
-}
-
-@media (max-width: map-get(styles.$breakpoints, large)) {
-  .middle-card {
-    margin-top: 0;
-  }
-}
