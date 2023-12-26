@@ -1,5 +1,9 @@
-<div class="contents" style="background-image: url('{{ image }}');">
-  <div [class.overlay]="subtitle">
-    <p class="flex">{{ subtitle }}</p>
+<div class="contents">
+  <!-- Hack to get the height to always match the width -->
+  <div class="square-div"></div>
+  <div class="actual-contents" style="background-image: url('{{ image }}');">
+    <div [class.overlay]="subtitle">
+      <p class="flex">{{ subtitle }}</p>
+    </div>
   </div>
 </div>
