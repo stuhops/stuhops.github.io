@@ -8,33 +8,42 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  &:hover {
-    filter: drop-shadow(0 0 10px #000);
-    transform: scale(1.05);
-
+  @media (hover: hover) {
     * {
-      opacity: 1;
+      opacity: 0;
     }
 
-    & > div {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
+    &:hover {
+      filter: drop-shadow(0 0 10px #000);
+      transform: scale(1.05);
 
-      ul {
-        overflow-y: auto;
-      }
-
-      .row {
-        flex: none;
-        justify-content: center;
+      * {
+        opacity: 1;
       }
     }
   }
 
+  @media (hover: none) {
+    filter: drop-shadow(0 0 10px #000);
+  }
+
   * {
-    opacity: 0;
     color: map-get(styles.$text-gray, lightest);
+  }
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+
+    ul {
+      overflow-y: auto;
+    }
+
+    .row {
+      flex: none;
+      justify-content: center;
+    }
   }
 }
