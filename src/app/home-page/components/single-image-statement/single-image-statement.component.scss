@@ -3,10 +3,12 @@
 .contents {
   width: 100%;
   padding: 10rem 2rem;
+  align-items: center;
 
   & > div {
     max-width: 1920px;
-    align-items: center;
+    height: 100%;
+    align-items: stretch;
     justify-content: center;
     gap: 2rem;
 
@@ -20,14 +22,15 @@
 
     .image {
       overflow: hidden;
-      img {
-        flex: 1;
-      }
     }
 
-    p {
-      font-size: 1.25rem;
-      line-height: 2rem;
+    .text {
+      justify-content: center;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
     }
   }
 }

@@ -8,7 +8,9 @@
       <home-page-my-work-card
         button="USU"
         class="card flex"
+        href="https://it.usu.edu/it_teams"
         title="USU Networking"
+        image="{{ environment.assetPrefix }}usu.png"
         [statements]="[
           'Built and maintained key websites to manage user registration and access to the network',
           'Constructed management platforms for the networking team to monitor network performance',
@@ -19,6 +21,8 @@
       <home-page-my-work-card
         button="Visit Guru"
         class="card middle-card flex"
+        href="https://www.gurutechnologies.net/"
+        image="{{ environment.assetPrefix }}guru.png"
         title="Guru Technologies"
         [statements]="[
           'Technology lead on a project with 6 developers, consistently meeting client deadlines',
@@ -29,10 +33,12 @@
         ]"
       ></home-page-my-work-card>
       <home-page-my-work-card
-        button="Play Frogger"
+        button="Git Hub"
         class="card flex"
+        href="{{ environment.resume.github }}"
+        image="{{ environment.assetPrefix }}frogger.png"
         title="Personal Projects"
-        [statements]="['Frogger']"
+        [statements]="['Frogger', 'Personal Website']"
       ></home-page-my-work-card>
     </div>
     <a href="{{ environment.resume.github }}">
