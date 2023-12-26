@@ -31,6 +31,16 @@ html {
   color: map-get(theme.$text-gray, default);
 }
 
+p,
+a,
+span,
+li,
+ul,
+td,
+th {
+  font-size: 1rem;
+}
+
 $min-title-size: 2rem;
 @mixin font_growth_changes($font-growth) {
   h1 {
@@ -46,15 +56,15 @@ $min-title-size: 2rem;
   }
 
   h4 {
-    font-size: calc($min-title-size * 3 * $font-growth);
+    font-size: calc($min-title-size * 3.5 * $font-growth);
   }
 
   h5 {
-    font-size: calc($min-title-size * 2 * $font-growth);
+    font-size: calc($min-title-size * 3 * $font-growth);
   }
 
   h6 {
-    font-size: calc($min-title-size * 1 * $font-growth);
+    font-size: calc($min-title-size * 2.5 * $font-growth);
   }
 }
 
