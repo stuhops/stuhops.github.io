@@ -16,6 +16,14 @@
       gap: 0.5rem;
     }
 
+    .carousel {
+      background-color: blue;
+      background-image: url('/assets/local/main-profile-image/large.jpg');
+      height: 40rem;
+      width: 100%;
+      background-repeat: no-repeat;
+    }
+
     .tiles {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
