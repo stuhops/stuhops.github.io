@@ -1,10 +1,8 @@
 <div class="contents col">
   <div class="flex row" [class.reverse]="imageSide === 'right'">
-    <div
-      class="flex image"
-      style="background-image: url('{{ imageSource }}');"
-      [class.align-right]="imageSide === 'left'"
-    ></div>
+    <div class="flex image">
+      <img alt="{{ altText }}" src="{{ imageSource }}" />
+    </div>
     <div class="col flex2 text" [class.align-right]="imageSide === 'right'">
       <h3>{{ title }}</h3>
       <p *ngIf="description">{{ description }}</p>

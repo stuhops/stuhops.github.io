@@ -8,6 +8,7 @@
   & > div {
     max-width: 1920px;
     height: 100%;
+    max-width: 100%;
     align-items: stretch;
     justify-content: center;
     gap: 2rem;
@@ -22,13 +23,16 @@
 
     .image {
       overflow: hidden;
+
+      img {
+        height: 100%;
+      }
     }
 
     .text {
       justify-content: center;
 
       p {
-        font-size: 1.25rem;
         line-height: 2rem;
       }
     }
@@ -37,7 +41,7 @@
 
 @media (min-width: map-get(styles.$breakpoints, large)) {
   .contents {
-    min-height: 90vh;
+    min-height: 60vh;
 
     & > div {
       gap: 5rem;
