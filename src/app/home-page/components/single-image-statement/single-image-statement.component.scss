@@ -1,6 +1,6 @@
 @use 'src/styles.scss' as styles;
 
-.contents {
+.large-contents {
   width: 100%;
   padding: 10rem 2rem;
   align-items: center;
@@ -39,35 +39,49 @@
   }
 }
 
+.small-contents {
+  padding: 4rem 2rem;
+
+  mat-icon {
+    $size: 2rem;
+    width: $size;
+    height: $size;
+    font-size: $size;
+  }
+}
+
 @media (min-width: map-get(styles.$breakpoints, large)) {
-  .contents {
+  .large-contents {
     min-height: 60vh;
 
     & > div {
       gap: 5rem;
     }
   }
+
+  .small-contents {
+    display: none;
+  }
 }
 
 @media (max-width: map-get(styles.$breakpoints, large)) {
-  .contents {
+  .large-contents {
     & > div.row {
       gap: 2rem;
     }
   }
+
+  .small-contents {
+    display: none;
+  }
 }
 
 @media (max-width: map-get(styles.$breakpoints, medium)) {
-  .contents {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .large-contents {
+    display: none;
+  }
 
-    h3 {
-      text-align: center;
-    }
-
-    .image {
-      display: none;
-    }
+  .small-contents {
+    display: block;
   }
 }
