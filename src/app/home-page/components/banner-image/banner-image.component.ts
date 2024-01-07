@@ -12,7 +12,7 @@ import { ImageSize } from '../../models/image-size.model';
 export class BannerImageComponent implements OnInit {
   @Input({ required: true }) imageSource!: string;
   @Input() imageSizes: ImageSize[] = [];
-  @Input() statement: string = 'Full Stack\nDeveloper.';
+  @Input() statement: string = 'Full Stack\nDeveloper';
   BasicColors = BasicColors;
   resumeDownload = `${environment.assetPrefix}${environment.resume.download}`;
   email = environment.resume.email;
