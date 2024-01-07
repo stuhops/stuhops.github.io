@@ -1,18 +1,13 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 
+$base-font-size: 1.5rem;
 $topnav-height: 56px;
 
 $grayscale: mat.define-palette(mat.$grey-palette, 800, 300, 900, 900);
 
 $primary: $grayscale;
-$accent: map.merge(
-  mat.define-palette(mat.$amber-palette, 300),
-  (
-    'lightest': map.get(mat.$amber-palette, 50),
-    'darkest': map.get(mat.$amber-palette, 600),
-  )
-);
+$accent: mat.define-palette(mat.$blue-palette, 700);
 $warn: mat.define-palette(mat.$yellow-palette);
 $danger: mat.define-palette(mat.$red-palette);
 

@@ -38,48 +38,47 @@ li,
 ul,
 td,
 th {
-  font-size: 1rem;
+  font-size: theme.$base-font-size;
 }
 
-$min-title-size: 2rem;
 @mixin font_growth_changes($font-growth) {
   h1 {
-    font-size: calc($min-title-size * 6 * $font-growth);
+    font-size: calc(theme.$base-font-size * 6 * $font-growth);
   }
 
   h2 {
-    font-size: calc($min-title-size * 5 * $font-growth);
+    font-size: calc(theme.$base-font-size * 5 * $font-growth);
   }
 
   h3 {
-    font-size: calc($min-title-size * 4 * $font-growth);
+    font-size: calc(theme.$base-font-size * 4 * $font-growth);
   }
 
   h4 {
-    font-size: calc($min-title-size * 3.5 * $font-growth);
+    font-size: calc(theme.$base-font-size * 3.5 * $font-growth);
   }
 
   h5 {
-    font-size: calc($min-title-size * 3 * $font-growth);
+    font-size: calc(theme.$base-font-size * 3 * $font-growth);
   }
 
   h6 {
-    font-size: calc($min-title-size * 2.5 * $font-growth);
+    font-size: calc(theme.$base-font-size * 2.5 * $font-growth);
   }
 }
 
 @media (min-width: map-get(theme.$breakpoints, large)) {
-  $font-growth: 0.5;
+  $font-growth: 0.6;
   @include font_growth_changes($font-growth);
 }
 
 @media (max-width: map-get(theme.$breakpoints, large)) {
-  $font-growth: 0.4;
+  $font-growth: 0.5;
   @include font_growth_changes($font-growth);
 }
 
 @media (max-width: map-get(theme.$breakpoints, medium)) {
-  $font-growth: 0.3;
+  $font-growth: 0.4;
   @include font_growth_changes($font-growth);
 }
 
