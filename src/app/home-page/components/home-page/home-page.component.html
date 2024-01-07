@@ -3,13 +3,23 @@
     [imageSource]="environment.assetPrefix + 'main-profile-image/small.jpg'"
     [imageSizes]="bannerImageSizes"
   />
-  <home-page-single-image-statement
-    altText="Code sample"
-    description="I am passionate about creating quality experiences that are fast, responsive, and beautiful. I place emphasis on user feedback to create superior product interactions."
-    title="Software Engineering is my passion"
-    [imageSource]="environment.assetPrefix + 'code-sample.png'"
-  ></home-page-single-image-statement>
-  <home-page-skill-list></home-page-skill-list>
+  <div class="section">
+    <home-page-single-image-statement
+      altText="Code sample"
+      description="I am passionate about creating quality experiences that are fast, responsive, and beautiful. I place emphasis on user feedback to create superior product interactions."
+      title="Software Engineering is my passion"
+      [imageSource]="environment.assetPrefix + 'code-sample.png'"
+    ></home-page-single-image-statement>
+  </div>
+  <shared-full-screen-ticker
+    class="row ticker"
+    alt="Tech stack ticker"
+    [imgRatio]="9530 / 200"
+    [src]="environment.assetPrefix + 'logos/colorized-logos.png'"
+  ></shared-full-screen-ticker>
+  <div class="section">
+    <home-page-skill-list></home-page-skill-list>
+  </div>
   <home-page-my-work></home-page-my-work>
   <shared-contact-me-banner header="So you like what you see?"></shared-contact-me-banner>
   <home-page-outside-of-work-banner></home-page-outside-of-work-banner>

@@ -1,0 +1,45 @@
+@use '/src/styles.scss' as styles;
+
+.contents {
+  .ticker {
+    padding: 1rem 0;
+    width: 100%;
+    background-color: rgba(100, 100, 100, 0.05);
+  }
+}
+
+@media (min-width: map-get(styles.$breakpoints, medium)) {
+  .contents {
+    .section {
+      padding: 5rem 2rem;
+    }
+
+    .ticker {
+      height: 75px;
+    }
+  }
+}
+
+@media (max-width: map-get(styles.$breakpoints, medium)) {
+  .contents {
+    .section {
+      padding: 10rem 2rem;
+    }
+
+    .ticker {
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: map-get(styles.$breakpoints, small)) {
+  .contents {
+    .section {
+      padding: 4rem 2rem;
+    }
+
+    .ticker {
+      height: 50px;
+    }
+  }
+}

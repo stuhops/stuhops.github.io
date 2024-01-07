@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StrokedButtonComponent } from './components/stroked-button/stroked-button.component';
 import { ContactMeBannerComponent } from './components/contact-me-banner/contact-me-banner.component';
 import { IconCardComponent } from './components/icon-card/icon-card.component';
+import { FullScreenTickerComponent } from './components/full-screen-ticker/full-screen-ticker.component';
 
 const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] = [
   CommonModule,
@@ -20,7 +21,13 @@ const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] 
     ContactMeBannerComponent,
     StrokedButtonComponent,
     IconCardComponent,
+    FullScreenTickerComponent,
   ],
-  declarations: [ContactMeBannerComponent, StrokedButtonComponent, IconCardComponent],
+  declarations: [
+    ContactMeBannerComponent,
+    StrokedButtonComponent,
+    IconCardComponent,
+    FullScreenTickerComponent,
+  ],
 })
 export class SharedModule {}
