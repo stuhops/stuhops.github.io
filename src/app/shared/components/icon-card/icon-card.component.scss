@@ -1,0 +1,16 @@
+.contents {
+  border: var(--accent) 3px solid;
+
+  .title {
+    padding: 1rem 0.5rem 0;
+    color: var(--accent);
+
+    mat-icon {
+      margin-bottom: -0.3rem;
+      $size: inherit;
+      width: $size;
+      height: $size;
+      font-size: $size;
+    }
+  }
+}

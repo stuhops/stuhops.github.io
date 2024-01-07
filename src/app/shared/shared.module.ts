@@ -4,6 +4,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StrokedButtonComponent } from './components/stroked-button/stroked-button.component';
 import { ContactMeBannerComponent } from './components/contact-me-banner/contact-me-banner.component';
+import { IconCardComponent } from './components/icon-card/icon-card.component';
 
 const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] = [
   CommonModule,
@@ -14,7 +15,12 @@ const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] 
 
 @NgModule({
   imports: [commonImportsAndExports],
-  exports: [commonImportsAndExports, ContactMeBannerComponent, StrokedButtonComponent],
-  declarations: [ContactMeBannerComponent, StrokedButtonComponent],
+  exports: [
+    commonImportsAndExports,
+    ContactMeBannerComponent,
+    StrokedButtonComponent,
+    IconCardComponent,
+  ],
+  declarations: [ContactMeBannerComponent, StrokedButtonComponent, IconCardComponent],
 })
 export class SharedModule {}
