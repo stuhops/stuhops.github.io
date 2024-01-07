@@ -1,23 +1,40 @@
 @use '/src/styles.scss' as styles;
 
 .contents {
-  color: map-get(styles.$text-gray, lightest);
-  background-color: map-get(styles.$background-levels-dark, default);
+  background-color: map-get(styles.$background-levels, default);
   min-height: 50vh;
-  padding: 5rem;
+
+  @media (min-width: map-get(styles.$background-levels, medium)) {
+    & {
+      padding: 5rem;
+    }
+  }
+
+  @media (max-width: map-get(styles.$background-levels, medium)) {
+    & {
+      padding: 2rem;
+    }
+  }
 
   & > .col {
     justify-content: center;
     align-items: center;
 
+    .outline {
+      border: black solid 2px;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: map-get(styles.$background-levels, darker);
+    }
+
     h6 {
-      color: map-get(styles.$warn, default);
+      color: map-get(styles.$accent, default);
     }
   }
 
   h3 {
     text-align: center;
-    color: map-get(styles.$text-gray, lightest);
+    color: map-get(styles.$text-gray, default);
   }
 
   .row {
