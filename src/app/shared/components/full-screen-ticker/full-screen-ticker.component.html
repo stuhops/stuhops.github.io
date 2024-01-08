@@ -1,5 +1,5 @@
 <div
   #ticker
   class="contents"
-  style="--src: url('{{ src }}'); --image-width: {{ imageWidth }}px"
+  style="--src: url(data:image/jpeg;base64,{{ image }}); --image-width: {{ imageWidth() ?? 0 }}px"
 ></div>

@@ -6,9 +6,11 @@ import { StrokedButtonComponent } from './components/stroked-button/stroked-butt
 import { ContactMeBannerComponent } from './components/contact-me-banner/contact-me-banner.component';
 import { IconCardComponent } from './components/icon-card/icon-card.component';
 import { FullScreenTickerComponent } from './components/full-screen-ticker/full-screen-ticker.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] = [
   CommonModule,
+  HttpClientModule,
   FormsModule,
   MaterialModule,
   ReactiveFormsModule,

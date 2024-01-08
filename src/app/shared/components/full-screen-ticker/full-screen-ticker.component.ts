@@ -1,21 +1,67 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  Signal,
+  ViewChild,
+  WritableSignal,
+  computed,
+  signal,
+} from '@angular/core';
 
 @Component({
   selector: 'shared-full-screen-ticker',
   templateUrl: './full-screen-ticker.component.html',
   styleUrls: ['./full-screen-ticker.component.scss'],
 })
-export class FullScreenTickerComponent implements AfterViewInit {
+export class FullScreenTickerComponent implements OnInit {
   @Input() alt: string = '';
   @Input({ required: true }) src: string = '';
-  @Input({ required: true }) imgRatio: number = 0; // The ratio width:height so we can calculate how wide the image is given a certain height
   @ViewChild('ticker') tickerRef!: ElementRef;
-  imageWidth: number = 0;
-
-  ngAfterViewInit(): void {
+  image: string | null = null;
+  imgRatio: WritableSignal<number | null> = signal(null); // The ratio width:height so we can calculate how wide the image is given a certain height
+  imageWidth: Signal<number | null> = computed(() => {
+    if (!this.imgRatio()) return null;
     const elHeight: number = this.tickerRef.nativeElement.offsetHeight;
-    setTimeout(() => {
-      this.imageWidth = elHeight * this.imgRatio;
-    }, 0); // Removes the ng100 error but we have to do this math after everything has been set
+    return elHeight * this.imgRatio()!;
+  });
+
+  constructor(private _http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.fetchImage();
+  }
+
+  fetchImage(): void {
+    this._http.get(this.src, { responseType: 'arraybuffer' }).subscribe(
+      (data: ArrayBuffer) => {
+        const binaryArray = new Uint8Array(data);
+        this.image = this._arrayBufferToBase64(binaryArray);
+        this.updateImageRatio();
+      },
+      (error) => {
+        console.error(error);
+      },
+    );
+  }
+
+  async updateImageRatio(): Promise<void> {
+    const img = new Image();
+    img.src = 'data:image/png;base64,' + this.image;
+    img.onload = () => this.imgRatio.set(img.width / img.height);
+  }
+
+  private _arrayBufferToBase64(buffer: Uint8Array): string {
+    let binary = '';
+    const bytes = new Uint8Array(buffer);
+    const len = bytes.byteLength;
+
+    for (let i = 0; i < len; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+
+    return btoa(binary);
   }
 }
