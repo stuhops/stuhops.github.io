@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   background-color: map-get(styles.$background-levels, default);
-  padding: 5rem;
 
   & > div {
     align-items: center;
