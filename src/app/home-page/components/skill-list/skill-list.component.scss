@@ -2,6 +2,9 @@
 
 .contents {
   background-color: map-get(styles.$background-levels, default);
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 
   @media (min-width: map-get(styles.$background-levels, medium)) {
     & {
@@ -27,31 +30,28 @@
       background-color: map-get(styles.$background-levels, darker);
     }
 
-    h6 {
-      color: map-get(styles.$accent, default);
+    h3 {
+      text-align: center;
+      color: map-get(styles.$text-gray, default);
     }
-  }
 
-  h3 {
-    text-align: center;
-    color: map-get(styles.$text-gray, default);
-  }
+    .skill-area {
+      display: flex;
+      max-width: 100rem;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
 
-  .row {
-    max-width: 100rem;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 2rem;
-
-    & > div {
-      min-width: 10rem;
+      & > div {
+        min-width: 10rem;
+      }
     }
   }
 }
 
-.row {
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+@media (max-width: map-get(styles.$breakpoints, medium)) {
+  .skill-area {
+    flex-direction: column;
+  }
 }
