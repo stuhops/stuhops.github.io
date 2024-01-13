@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CircleImageStatementComponent {
   @Input() alt: string = 'Code sample';
-  @Input() image: string = `${environment.assetPrefix}code.png`;
-  @Input() title: string = 'Title';
   @Input() description?: string;
+  @Input() image: string = `${environment.assetPrefix}custom-icons/code.svg`;
+  @Input() title: string = 'Title';
 }

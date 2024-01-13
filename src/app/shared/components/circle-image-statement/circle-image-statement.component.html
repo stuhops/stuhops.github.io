@@ -1,5 +1,7 @@
 <div class="contents col">
-  <img [alt]="alt" [src]="image" />
+  <div class="image-container">
+    <img [alt]="alt" [src]="image" />
+  </div>
   <div class="copy col">
     <h6>{{ title }}</h6>
     <p *ngIf="description">{{ description }}</p>

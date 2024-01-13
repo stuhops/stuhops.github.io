@@ -1,50 +1,39 @@
-<div class="contents row">
-  <div class="col">
-    <div class="header col">
-      <h3>My experience</h3>
-      <p class="subtitle">Take a look at some of my work</p>
+<div class="contents col">
+  <div class="title col">
+    <h2>My Experience</h2>
+    <p class="subtitle">
+      Take a look at some of the places I've worked, as well as my personal projects
+    </p>
+  </div>
+  <div class="cards">
+    <div class="card flex">
+      <shared-circle-image-statement
+        alt="Utah State University Logo"
+        description="Full Stack Developer at Utah State building and maintaining critical network management and monitoring sites. Worked hand in hand with the networking team to create the most pragmatic sites for both their internal and external tool sets."
+        image="{{ environment.assetPrefix }}logos/usu.svg"
+        title="Utah State University"
+      ></shared-circle-image-statement>
     </div>
-    <div class="row">
-      <home-page-my-work-card
-        button="USU"
-        class="card flex"
-        href="https://it.usu.edu/it_teams"
-        title="USU Networking"
-        image="{{ environment.assetPrefix }}usu.png"
-        [statements]="[
-          'Built and maintained key websites to manage user registration and access to the network',
-          'Constructed management platforms for the networking team to monitor network performance',
-          'Upgraded critical emergency communication software to modern REST API protocols in compliance with local police statutes'
-        ]"
-      >
-      </home-page-my-work-card>
-      <home-page-my-work-card
-        button="Visit Guru"
-        class="card flex"
-        href="https://www.gurutechnologies.net/"
-        image="{{ environment.assetPrefix }}guru.png"
+    <div class="card flex">
+      <shared-circle-image-statement
+        alt="Guru Technologies Logo"
+        description="Lead Full Stack Engineer specializing in heading green field projects to meet client needs. Work includes meeting daily with clients, managing a team of engineers, and architecting simple effective solutions."
+        image="{{ environment.assetPrefix }}logos/guru.png"
         title="Guru Technologies"
-        [statements]="[
-          'Technology lead on a project with 6 developers, consistently meeting client deadlines',
-          'Lead engineer on a heavily integrated business management application for a company with $18.8M in yearly revenue',
-          'Head Angular developer over 5 separate projects including mentoring new hires and defining direction for existing employees',
-          'Worked hand in hand with clients to define their MVP, resolve competing requirements, and stay within budget',
-          'Designed and developed frontend UI/UX, backend database architecture, and Gitlab/AWS devops for multiple projects'
-        ]"
-      ></home-page-my-work-card>
-      <home-page-my-work-card
-        button="Git Hub"
-        class="card flex"
-        href="{{ environment.resume.github }}"
-        image="{{ environment.assetPrefix }}frogger.png"
-        title="Personal Projects"
-        [statements]="['Frogger', 'Personal Website']"
-      ></home-page-my-work-card>
+      ></shared-circle-image-statement>
     </div>
-    <a href="{{ environment.resume.github }}">
-      <shared-stroked-button [oversized]="true" [stroke]="BasicColors.accent">
-        GitHub
-      </shared-stroked-button>
-    </a>
+    <div class="card flex">
+      <shared-circle-image-statement
+        alt="Frog sprites"
+        description="Personal project to learn more about game development and game engines. The game features a game engine built from scratch and all components built by hand. This project is a work in progress and will continue to gain levels and robustness."
+        image="{{ environment.assetPrefix }}logos/frogger-frogs.png"
+        title="Frogger"
+      ></shared-circle-image-statement>
+    </div>
+  </div>
+  <div class="actions">
+    <shared-stroked-button [oversized]="true" [stroke]="BasicColors.accent">
+      GitHub
+    </shared-stroked-button>
   </div>
 </div>

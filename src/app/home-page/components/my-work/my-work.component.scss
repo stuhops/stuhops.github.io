@@ -1,32 +1,29 @@
 @use '/src/styles.scss' as styles;
 
 .contents {
-  justify-content: center;
   align-items: center;
-  background-color: map-get(styles.$background-levels, default);
-  padding: 5rem;
+  text-align: center;
+  gap: 2rem;
 
-  & > .col {
-    align-items: center;
+  .cards {
+    max-width: 100rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
     width: 100%;
-    gap: 2rem;
 
-    .header {
-      text-align: center;
-      gap: 0.5rem;
+    .card {
+      padding: 1rem;
+      border-radius: 8px;
     }
+  }
+}
 
-    & > .row {
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 5rem;
-
-      .card {
-        height: 30rem;
-        max-width: 25rem;
-        min-width: 300px;
-      }
+@media (max-width: map-get(styles.$breakpoints, medium)) {
+  .contents {
+    .cards {
+      flex-direction: column;
     }
   }
 }

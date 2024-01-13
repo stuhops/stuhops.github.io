@@ -6,9 +6,11 @@
 
 @media (min-width: map-get(styles.$breakpoints, medium)) {
   .contents {
+    text-align: left;
+
     img {
-      width: 3rem;
-      height: auto;
+      height: 3rem;
+      object-fit: contain;
     }
   }
 }
@@ -19,8 +21,7 @@
     text-align: center;
 
     img {
-      width: 2rem;
-      height: auto;
+      height: 2rem;
     }
   }
 }
