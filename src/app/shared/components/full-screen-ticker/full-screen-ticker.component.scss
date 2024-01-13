@@ -7,19 +7,11 @@
   background-repeat: repeat-x;
   background-position-x: var(--image-width);
 
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 20s;
-  animation-delay: 10ms;
-}
-
-@-webkit-keyframes ticker {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: calc(var(--image-width) * -1);
+  &.animate {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 20s;
   }
 }
 

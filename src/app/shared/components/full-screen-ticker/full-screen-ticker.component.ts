@@ -25,6 +25,7 @@ export class FullScreenTickerComponent implements OnInit {
   imageWidth: Signal<number | null> = computed(() => {
     if (!this.imgRatio()) return null;
     const elHeight: number = this.tickerRef.nativeElement.offsetHeight;
+    this._animate();
     return elHeight * this.imgRatio()!;
   });
 
@@ -51,6 +52,16 @@ export class FullScreenTickerComponent implements OnInit {
     const img = new Image();
     img.src = 'data:image/png;base64,' + this.image;
     img.onload = () => this.imgRatio.set(img.width / img.height);
+  }
+
+  private _animate(): void {
+    // Remove the 'animate' class
+    this.tickerRef.nativeElement.classList.remove('animate');
+
+    // Add the 'animate' class back after 100ms
+    setTimeout(() => {
+      this.tickerRef.nativeElement.classList.add('animate');
+    }, 100);
   }
 
   private _arrayBufferToBase64(buffer: Uint8Array): string {
