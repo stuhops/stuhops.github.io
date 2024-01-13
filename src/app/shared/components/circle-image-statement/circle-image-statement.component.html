@@ -1,0 +1,8 @@
+<div class="contents col">
+  <img [alt]="alt" [src]="image" />
+  <div class="copy col">
+    <h6>{{ title }}</h6>
+    <p *ngIf="description">{{ description }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

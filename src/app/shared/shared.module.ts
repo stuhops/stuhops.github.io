@@ -7,6 +7,7 @@ import { ContactMeBannerComponent } from './components/contact-me-banner/contact
 import { IconCardComponent } from './components/icon-card/icon-card.component';
 import { FullScreenTickerComponent } from './components/full-screen-ticker/full-screen-ticker.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CircleImageStatementComponent } from './components/circle-image-statement/circle-image-statement.component';
 
 const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] = [
   CommonModule,
@@ -24,12 +25,14 @@ const commonImportsAndExports: (any[] | Type<any> | ModuleWithProviders<any>)[] 
     StrokedButtonComponent,
     IconCardComponent,
     FullScreenTickerComponent,
+    CircleImageStatementComponent,
   ],
   declarations: [
     ContactMeBannerComponent,
     StrokedButtonComponent,
     IconCardComponent,
     FullScreenTickerComponent,
+    CircleImageStatementComponent,
   ],
 })
 export class SharedModule {}

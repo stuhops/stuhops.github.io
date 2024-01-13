@@ -1,6 +1,10 @@
 @use '/src/styles.scss' as styles;
 
 .contents {
+  .divider {
+    border-bottom: 1px solid map-get(styles.$text-gray, lightest);
+  }
+
   .ticker {
     padding: 1rem 0;
     width: 100%;
@@ -23,7 +27,7 @@
 @media (max-width: map-get(styles.$breakpoints, medium)) {
   .contents {
     .section {
-      padding: 10rem 2rem;
+      padding: 4rem 2rem;
     }
 
     .ticker {
@@ -34,10 +38,6 @@
 
 @media (max-width: map-get(styles.$breakpoints, small)) {
   .contents {
-    .section {
-      padding: 4rem 2rem;
-    }
-
     .ticker {
       height: 50px;
     }

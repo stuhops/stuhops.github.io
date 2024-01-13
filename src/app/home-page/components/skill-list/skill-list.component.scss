@@ -2,7 +2,6 @@
 
 .contents {
   background-color: map-get(styles.$background-levels, default);
-  min-height: 50vh;
 
   @media (min-width: map-get(styles.$background-levels, medium)) {
     & {
@@ -19,6 +18,7 @@
   & > .col {
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 
     .outline {
       border: black solid 2px;

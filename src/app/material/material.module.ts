@@ -5,8 +5,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
-  exports: [MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule, MatCardModule],
+  exports: [
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatDividerModule,
+  ],
 })
 export class MaterialModule {}
