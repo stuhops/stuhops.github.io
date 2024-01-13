@@ -1,21 +1,25 @@
 <div class="contents" style="background-image: url('{{ imageSource }}')">
   <div class="col">
     <h2>{{ statement }}</h2>
-    <div class="row buttons">
-      <a href="mailTo:{{ email }}" class="drop-shadow">
-        <shared-stroked-button
-          [lightText]="true"
-          [oversized]="true"
-          [stroke]="BasicColors.accent"
-          [textShadow]="true"
-        >
-          Contact Stu
-        </shared-stroked-button>
+    <div class="col buttons">
+      <a href="mailTo:{{ email }}">
+        <div class="drop-shadow">
+          <shared-stroked-button
+            [lightText]="true"
+            [oversized]="true"
+            [stroke]="BasicColors.accent"
+            [textShadow]="true"
+          >
+            Contact Stu
+          </shared-stroked-button>
+        </div>
       </a>
-      <a download [href]="resumeDownload" class="drop-shadow">
-        <shared-stroked-button [lightText]="true" [oversized]="true" [textShadow]="true">
-          Download Resume
-        </shared-stroked-button>
+      <a download [href]="resumeDownload">
+        <div class="drop-shadow">
+          <shared-stroked-button [lightText]="true" [oversized]="true" [textShadow]="true">
+            Download Resume
+          </shared-stroked-button>
+        </div>
       </a>
     </div>
   </div>
