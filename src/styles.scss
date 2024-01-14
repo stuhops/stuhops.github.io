@@ -5,10 +5,10 @@
 
 @include mat.core();
 @include mat.all-component-themes(theme.$theme);
-//  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 * {
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 a {
@@ -39,6 +39,18 @@ ul,
 td,
 th {
   font-size: theme.$base-font-size;
+  font-family: inherit;
+}
+
+p,
+li,
+ul,
+td,
+th,
+table,
+tbody,
+thead {
+  font-family: 'Lora', serif;
 }
 
 @mixin font_growth_changes($font-growth) {
@@ -64,6 +76,10 @@ th {
 
   h6 {
     font-size: calc(theme.$base-font-size * 2.5 * $font-growth);
+  }
+
+  .subtitle {
+    font-size: calc(theme.$base-font-size * 2 * $font-growth);
   }
 }
 
@@ -119,6 +135,6 @@ button {
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
   color: map-get(theme.$text-gray, lighter);
 }
