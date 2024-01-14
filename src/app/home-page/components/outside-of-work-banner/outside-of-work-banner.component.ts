@@ -22,11 +22,11 @@ export class OutsideOfWorkBannerComponent {
     },
     {
       image: `${environment.assetPrefix}outside-of-work/el-cap-small.jpg`,
-      subtitle: 'In 2023 I climbed El Capitan in Yosemite!',
+      subtitle: 'In 2023 I climbed El Capitan in Yosemite',
     },
     {
       image: `${environment.assetPrefix}outside-of-work/guiding-small.jpg`,
-      subtitle: 'I also love to guide in, teach about, and share with others how to get outside',
+      subtitle: 'I like to guide in, teach about, and share the outdoors',
     },
     {
       image: `${environment.assetPrefix}outside-of-work/rowing-small.jpg`,
@@ -38,7 +38,7 @@ export class OutsideOfWorkBannerComponent {
     },
     {
       image: `${environment.assetPrefix}outside-of-work/backpacking-small.jpg`,
-      subtitle: 'I like to backpack and reach beautiful places',
+      subtitle: 'I like to backpack to reach beautiful places',
     },
   ];
 }
