@@ -1,0 +1,16 @@
+<div class="contents row">
+  <a routerLink="/projects/happy-hopper">
+    <button mat-icon-button class="exit" matTooltip="Close player">
+      <mat-icon>close</mat-icon>
+    </button>
+  </a>
+
+  <div class="game-container">
+    <canvas #gameCanvas class="game-canvas" [width]="CANVAS_SIZE" [height]="CANVAS_SIZE"></canvas>
+  </div>
+
+  <audio class="background-music" autoplay loop>
+    <source src="{{ BACKGROUND_MUSIC_URL }}" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
