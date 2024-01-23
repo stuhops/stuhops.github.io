@@ -142,6 +142,8 @@ THE SOFTWARE.
 encode-utf8
 MIT
 
+happy-hopper
+
 qrcode
 MIT
 The MIT License (MIT)
