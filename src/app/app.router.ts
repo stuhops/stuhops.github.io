@@ -3,9 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'qrcode',
-    loadChildren: () =>
-      import('./qrcode-generator/qrcode-generator.module').then((m) => m.QrCodeGeneratorModule),
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then((m) => m.ProjectsModule),
   },
   {
     path: 'home',
